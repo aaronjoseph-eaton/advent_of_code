@@ -2,7 +2,7 @@ import numpy as np
 from sympy import *
 import json
 
-file_path = "input_13_1.in"  # Replace with the actual file path
+file_path = "input.txt"  # Replace with the actual file path
 #file_path = "test.in"  # Replace with the actual file path
 
 total = 0
@@ -47,6 +47,8 @@ with open(file_path) as f:
             pass
         elif mod == 2:
             machine["PRIZE"] = process_coordinates(line)
+            machine["PRIZE"]["X"] += 10000000000000
+            machine["PRIZE"]["Y"] += 10000000000000
             pass
         elif mod == 3:
             """             a = np.array([[machine["A"]["X"], machine["B"]["X"]], [machine["A"]["Y"], machine["B"]["Y"]]])
